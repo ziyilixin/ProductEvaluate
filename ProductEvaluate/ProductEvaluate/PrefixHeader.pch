@@ -1,0 +1,32 @@
+//
+//  PrefixHeader.pch
+//  ProductEvaluate
+//
+//  Created by Mac on 2021/3/29.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "MJExtension.h"
+#import "Masonry.h"
+#import "UIImageView+XFExtension.h"
+#import "UIView+LoanExtension.h"
+#import <SDWebImage/SDWebImage.h>
+#import "GKPhotoBrowser.h"
+
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+
+#define RGB_COLOR(_STR_,a) ([UIColor colorWithRed:[[NSString stringWithFormat:@"%lu", strtoul([[_STR_ substringWithRange:NSMakeRange(1, 2)] UTF8String], 0, 16)] intValue] / 255.0 green:[[NSString stringWithFormat:@"%lu", strtoul([[_STR_ substringWithRange:NSMakeRange(3, 2)] UTF8String], 0, 16)] intValue] / 255.0 blue:[[NSString stringWithFormat:@"%lu", strtoul([[_STR_ substringWithRange:NSMakeRange(5, 2)] UTF8String], 0, 16)] intValue] / 255.0 alpha:a])
+
+#define SYS_Font(a) [UIFont systemFontOfSize:(a)]
+
+#define minstr(a)    [NSString stringWithFormat:@"%@",a]
+
+#define kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+#define kTopHeight 44.0
+#define kNavigationBarHeight (kStatusBarHeight + kTopHeight)
+#define kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+
+#endif /* PrefixHeader_pch */

@@ -1,0 +1,11 @@
+platform :'ios', '12.0'
+# ignore all warnings from all pods
+inhibit_all_warnings!
+target 'ProductEvaluate' do
+#页面布局
+pod 'MJExtension'
+pod 'Masonry'
+pod 'SDWebImage'
+pod 'GKPhotoBrowser'
+end
+
